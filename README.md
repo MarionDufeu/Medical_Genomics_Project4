@@ -4,7 +4,7 @@ Welcome to our github repository for Project4 of the medical genomics course at 
 
 Before using our code, please download :
  
-- Kraken datasets on https://drive.google.com/file/d/1QYn5lDWjvhtIWCrwmzDc_1fy8ANrXWz1/view?usp=sharing
+- Kraken datasets for HPV on https://drive.google.com/file/d/1QYn5lDWjvhtIWCrwmzDc_1fy8ANrXWz1/view?usp=sharing
 
 - the viral references from the ViFi repository on https://github.com/sara-javadzadeh/ViFi
 
@@ -13,12 +13,45 @@ Before using our code, please download :
 Save them all where you clone this github directory.
 
 Then open your terminal, go to your github directory and do 
-- docker pull sarajava/fastvifi
+``docker pull sarajava/fastvifi``
 
-For now, you have to change the path where you put your files by hand in the code, and precise what fasta files and what virus you want to do the analysis with
 
 You can run the code now writing:
+``nextflow run pipeline_V1.nf``
 
-- nextflow run pipeline_V1.nf
+
+
+## How to build your own kraken dataset for FastViFi for other viruses ?
+
+First, clone the repository on the following link:
+https://github.com/sara-javadzadeh/kraken2
+
+Then, install kraken2 in the same directory by running :
+``./install_kraken2.sh .``
+
+After the installation is completed, you have to follow what is written in the Manual, we have copied and pasted what you should do:
+
+<div align="center">
+ <img src="manual.png" alt="Kraken2 Manual" />
+ </div>
+ 
+Here is the command : 
+```
+bash build_custom_kraken_database.sh <virus name> <input fasta> <base node ID>
+```
+
+
+### Example
+
+Let's say we want to create a kraken database for ebv virus, basically what you have to write in your terminal is 
+```
+bash build_custom_kraken_databse.sh ebv ../ViFi/viral_data/ebv/ebv.unaligned.fasta 9000000
+```
+
+After waiting for years, 2 directories are created:
+- Kraken2StandardDB_k_25_ebv_hg
+- Kraken2StandardDB_k_22_ebv
+
+Move both of them to the directory "kraken_datasets"
 
 Enjoy!
