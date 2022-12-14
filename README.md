@@ -50,7 +50,7 @@ bash build_custom_kraken_databse.sh ebv ../ViFi/viral_data/ebv/ebv.unaligned.fas
 
 After waiting for years, 2 directories are created:
 - Kraken2StandardDB_k_25_ebv_hg
-- Kraken2StandardDB_k_22_ebv
+- Kraken2StandardDB_k_18_ebv
 
 Move both of them to the directory "kraken_datasets"
 
