@@ -45,13 +45,18 @@ bash build_custom_kraken_database.sh <virus name> <input fasta> <base node ID>
 
 Let's say we want to create a kraken database for ebv virus, basically what you have to write in your terminal is 
 ```
-bash build_custom_kraken_databse.sh ebv ../ViFi/viral_data/ebv/ebv.unaligned.fasta 9000000
+bash build_custom_kraken_database.sh ebv ../ViFi/viral_data/ebv/ebv.unaligned.fasta 9000000
 ```
 
-After waiting for years, 2 directories are created:
+After waiting for years, 3 directories are created:
 - Kraken2StandardDB_k_25_ebv_hg
+- Kraken2StandardDB_k_22_ebv
 - Kraken2StandardDB_k_18_ebv
 
-Move both of them to the directory "kraken_datasets"
+Check if the files hash.k2d, opts.k2d and taxo.k2d are present for each.
+If not, extract the files of the taxdump.tar.gz in the "taxonomy" directory for each and re-run the command.
+You can check the log file to see if databases are complete.
+
+Move the 3 directories to the directory "kraken_datasets"
 
 Enjoy!
