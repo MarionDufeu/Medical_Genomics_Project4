@@ -2,11 +2,13 @@
 
 Welcome to our github repository for Project4 of the medical genomics course at INSA Lyon!
 
-Before using our code, please download :
+Before using our code, make sure you have nextflow installed on your computer, then please download :
  
 - Kraken datasets for HPV on https://drive.google.com/file/d/1QYn5lDWjvhtIWCrwmzDc_1fy8ANrXWz1/view?usp=sharing
 
 - the viral references from the ViFi repository on https://github.com/sara-javadzadeh/ViFi
+
+- the software FastVifi on https://github.com/sara-javadzadeh/FastViFi.git
 
 - the human reference on https://drive.google.com/file/d/1XBZbwgcV1n2AWWAyt2RWfSKKxzssRFBo/view?usp=share_link
 
@@ -17,7 +19,7 @@ Then open your terminal, go to your github directory and do
 
 
 You can run the code now writing:
-``nextflow run pipeline_V1.nf``
+``nextflow run pipeline_V2.nf``
 
 
 
