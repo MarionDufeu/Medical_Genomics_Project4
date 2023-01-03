@@ -5,7 +5,7 @@ nextflow.enable.dsl=2
 params.input = "$PWD/data_test/FASTQ/"
 
 fastqch = channel.fromFilePairs("${params.input}/*_{1,2}.fastq.gz")
-vir=Channel.of('ebv') //, 'hpv', 'hcv')
+vir=Channel.of('hpv') //, 'ebv', 'hcv')
 
 
 
